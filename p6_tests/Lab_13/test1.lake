@@ -1,0 +1,12 @@
+int x;
+int y;
+
+int main() {
+    x = 4;
+    y = 2;
+    if (y < x) {
+        write x;
+    } else {
+        read y;
+    }
+}
