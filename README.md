@@ -1,2 +1,1 @@
-# Compilers_p6
-Assembly code generator for lake language
+Worked on by Subhankar Dey and Blake Jordan
