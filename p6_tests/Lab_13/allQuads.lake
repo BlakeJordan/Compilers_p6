@@ -1,0 +1,19 @@
+int f(bool b) {
+  bool a = b;
+  if(a) {
+    return 4;
+  } else {
+    return 12;
+  }
+}
+
+int main() {
+  int a;
+  int * b;
+  b = &a;
+  a++;
+  while(a < 500) {
+    a = a + f(true);
+  }
+}
+

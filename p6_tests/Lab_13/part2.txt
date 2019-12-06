@@ -1,0 +1,13 @@
+1. objump -Dwrt prog >& prog.dump
+
+2. b lbl_after
+
+3. info registers
+
+4. x $rsp
+
+5. p $rsp
+
+6. x ($rbp-24)
+
+7. x/24g ($rbp-24)

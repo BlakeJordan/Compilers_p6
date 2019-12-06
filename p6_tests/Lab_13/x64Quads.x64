@@ -1,0 +1,19 @@
+.text
+.globl main
+
+main:
+    subq $8, %rsp
+    movq %rbp, (%rsp)
+    movq %rsp, %rbp
+    addq $16, %rbp
+    subq $16, %rsp
+    movq $2, %r12
+    movq $4, %rbx
+    cmpq %rbx, $2
+    jmpl lbl_after
+    movq $17, %r12
+
+lbl_after:
+    movq $60, %rax
+    movq %r12, %rdi
+    syscall 
