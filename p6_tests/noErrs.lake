@@ -1,0 +1,5 @@
+int fn(){
+	int a;
+	a = 4;
+	write a;
+}
