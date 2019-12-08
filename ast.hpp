@@ -113,6 +113,7 @@ public:
 	virtual Opd * flatten(Procedure * proc) = 0;
 };
 
+// no need to generate x64 for pointers
 class DerefNode : public ExpNode {
 public:
 	DerefNode(size_t line, size_t column, ExpNode *);

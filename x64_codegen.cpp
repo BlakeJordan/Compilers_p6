@@ -5,7 +5,10 @@
 namespace lake{
 
 void IRProgram::allocGlobals(){
-	TODO(Implement me)
+	for (auto global : globals) {
+
+	}
+	// TODO(Implement me)
 }
 
 void IRProgram::datagenX64(std::ostream& out){
@@ -17,7 +20,10 @@ void IRProgram::toX64(std::ostream& out){
 }
 
 void Procedure::allocLocals(){
-	TODO(Implement me)
+	for (auto local : locals) {
+		
+	}
+	// TODO(Implement me)
 }
 
 void Procedure::toX64(std::ostream& out){
@@ -109,7 +115,8 @@ void GetOutQuad::codegenX64(std::ostream& out){
 }
 
 void SymOpd::genLoad(std::ostream & out, std::string regStr){
-	TODO(Implement me)
+	out << "movq " << xmyLoc << regStr << "\n"; 
+	// TODO(Implement me)
 }
 
 void SymOpd::genStore(std::ostream& out, std::string regStr){
