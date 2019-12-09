@@ -1,0 +1,2 @@
+.data
+func_fn:

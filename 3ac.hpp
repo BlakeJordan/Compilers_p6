@@ -61,7 +61,7 @@ public:
 private:
 	SymOpd(SemSymbol * sym) : mySym(sym) {} 
 	SemSymbol * mySym;
-	std::string xmyLoc;
+	std::string myLoc;
 	friend class Procedure;
 	friend class IRProgram;
 };
