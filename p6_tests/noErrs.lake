@@ -1,5 +1,15 @@
-int fn(){
+bool f(bool c) {
+	return c;
+}
+
+int main() {
 	int a;
+	bool b;
+	b = false;
 	a = 4;
 	write a;
+	if (b) {
+		write b;
+	}
+	f(b);
 }

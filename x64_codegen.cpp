@@ -44,7 +44,6 @@ void IRProgram::toX64(std::ostream& out){
 	// TODO(Implement me)
 }
 
-// https://docs.google.com/document/d/1zefHUZg7h-lhQKEZnv2E10ndsyZkR3yMobn7W668tiE/edit?usp=sharing
 void Procedure::allocLocals(){
 	size_t localPos = 0;
 	// int numLocal= locals.size;
@@ -67,7 +66,6 @@ void Procedure::allocLocals(){
 		formalOpd->setMemoryLoc(memLoc);
 		formalPos++;
 	}
-	// TODO(Implement me)
 }
 
 void Procedure::toX64(std::ostream& out){
@@ -98,6 +96,7 @@ void Quad::codegenLabels(std::ostream& out){
 }
 
 // https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf
+// https://piazza.com/class_profile/get_resource/j7ly9riuca97on/ja86xbbpp0b73b
 void BinOpQuad::codegenX64(std::ostream& out){
 	out << "#BinOp\n";
 	if(op == DIV) {
@@ -141,7 +140,8 @@ void BinOpQuad::codegenX64(std::ostream& out){
 }
 
 void UnaryOpQuad::codegenX64(std::ostream& out){
-	TODO(Implement me)
+	out << "UnaryOpQuad_codeGen (implement)\n"; 
+	// TODO(Implement me)
 }
 
 void AssignQuad::codegenX64(std::ostream& out){
@@ -150,7 +150,8 @@ void AssignQuad::codegenX64(std::ostream& out){
 }
 
 void LocQuad::codegenX64(std::ostream& out){
-	TODO(Implement me)
+	out << "LocQuad_codeGen (implement)\n"; 
+	// TODO(Implement me)
 }
 
 void JmpQuad::codegenX64(std::ostream& out){
@@ -167,23 +168,28 @@ void NopQuad::codegenX64(std::ostream& out){
 }
 
 void SyscallQuad::codegenX64(std::ostream& out){
-	TODO(Implement me)
+	out << "SyscallQuad_codeGen (implement)\n"; 
+	// TODO(Implement me)
 }
 
 void CallQuad::codegenX64(std::ostream& out){
-	TODO(Implement me)
+	out << "CallQuad_codeGen (implement)\n"; 
+	// TODO(Implement me)
 }
 
 void EnterQuad::codegenX64(std::ostream& out){
-	TODO(Implement me)
+	out << "EnterQuad_codeGen (implement)\n"; 
+	// TODO(Implement me)
 }
 
 void LeaveQuad::codegenX64(std::ostream& out){
-	TODO(Implement me)
+	out << "LeaveQuad_codeGen (implement)\n"; 
+	// TODO(Implement me)
 }
 
 void SetInQuad::codegenX64(std::ostream& out){
-	TODO(Implement me)
+	out << "SetInQuad_codeGen (implement)\n"; 
+	// TODO(Implement me)
 }
 
 void GetInQuad::codegenX64(std::ostream& out){
@@ -191,32 +197,38 @@ void GetInQuad::codegenX64(std::ostream& out){
 }
 
 void SetOutQuad::codegenX64(std::ostream& out){
-	TODO(Implement me)
+	out << "SetOutQuad_codeGen (implement)\n"; 
+	// TODO(Implement me)
 }
 
 void GetOutQuad::codegenX64(std::ostream& out){
-	TODO(Implement me)
+	out << "GetOutQuad_codeGen (implement)\n"; 
+	// TODO(Implement me)
 }
 
 void SymOpd::genLoad(std::ostream & out, std::string regStr){
-	out << "movq " << myLoc << regStr << "\n"; 
+	out << "SymOpd_genLoad (implement)\n"; 
 	// TODO(Implement me)
 }
 
 void SymOpd::genStore(std::ostream& out, std::string regStr){
-	TODO(Implement me)
+	out << "SymOpd_genStore (implement)\n"; 
+	// TODO(Implement me)
 }
 
 void AuxOpd::genLoad(std::ostream & out, std::string regStr){
+	out << "AuxOpd_genLoad (implement)\n"; 
 	TODO(Implement me)
 }
 
 void AuxOpd::genStore(std::ostream& out, std::string regStr){
+	out << "AuxOpd_genStore (implement)\n"; 
 	TODO(Implement me)
 }
 
 void LitOpd::genLoad(std::ostream & out, std::string regStr){
-	TODO(Implement me)
+	out << "movq $8" << regStr << "\n"; 
+	// TODO(Implement me)
 }
 
 void LitOpd::genStore(std::ostream& out, std::string regStr){
