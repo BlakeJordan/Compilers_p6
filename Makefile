@@ -44,5 +44,10 @@ test: p6
 p6: all
 	$(MAKE) -C p6_tests/
 
+executable:
+	./lakec p6_tests/noErrs.lake -o output.s
+	as -o output.o output.s
+	ld -o output.exe output.o stdlake.o -dynamic-linker /lib64/ld-linux-x86-64.so.2 -lc
+
 cleantest:
 	$(MAKE) -C p5_tests/ clean

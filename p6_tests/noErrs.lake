@@ -1,3 +1,6 @@
+bool d;
+int z;
+
 bool f(bool c) {
 	return c;
 }
@@ -6,10 +9,18 @@ int main() {
 	int a;
 	bool b;
 	b = false;
+	z = 6;
+	d = true;
 	a = 4;
-	write a;
-	if (b) {
-		write b;
+	a = 2 * 3;
+	if(a < z)
+	{
+		a = 5 - 4;
 	}
+	a = 2 / 3;
+	a++;
+	a--; 
+	write a;
 	f(b);
+	return 0;
 }

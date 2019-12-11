@@ -1,6 +1,10 @@
 #include "stdio.h"
 #include "stdlib.h"
 
+void printInt(long int num);
+void printString(const char * str);
+long int getInt();
+
 void printInt(long int num){
 	fprintf(stdout, "%ld\n", num);
 }
@@ -14,5 +18,6 @@ long int getInt(){
 	fgets(buffer, 32, stdin);
 	long int res = atol(buffer);
 	fprintf(stdout, "read from buffer: %ld\n", res);
+	fflush(stdout);
 	return res;
 }
